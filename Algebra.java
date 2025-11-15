@@ -24,44 +24,73 @@ public class Algebra {
 	}  
 
 	// Returns x1 + x2
-	public static int plus(int x1, int x2) {
-		// Replace the following statement with your code
-		return 0;
-	}
+	public static int plus(int x1, int x2)
+	 {
+		for (int i = 0; i <x2; i++)
+		{
+		x1++;
+	    }
+		return x1;
+      } 
 
 	// Returns x1 - x2
-	public static int minus(int x1, int x2) {
-		// Replace the following statement with your code
-		return 0;
+	public static int minus(int x1, int x2) 
+	{
+        for (int i = 0; i <x2; i++)
+		{
+	    x1--;
+		}
+	    return x1;
 	}
 
 	// Returns x1 * x2
 	public static int times(int x1, int x2) {
-		// Replace the following statement with your code
-		return 0;
+		 int res = 0;
+		for (int i = 1; i <= x2; i++)
+		{
+		
+	    res = plus(res,x1);
+		}
+	    return res;
 	}
 
 	// Returns x^n (for n >= 0)
 	public static int pow(int x, int n) {
-		// Replace the following statement with your code
-		return 0;
+		int res = 1;
+		for (int i = 1; i <= n; i++)
+		{
+		 res= times(res,x);
+		}
+		return res;
 	}
 
 	// Returns the integer part of x1 / x2 
 	public static int div(int x1, int x2) {
-		// Replace the following statement with your code
-		return 0;
+       int s = x2, count = 0;
+		while((x1 >= s))
+		{
+		s = plus(s,x2);
+		count++;
+	   }
+   		return count;
 	}
 
 	// Returns x1 % x2
 	public static int mod(int x1, int x2) {
-		// Replace the following statement with your code
-		return 0;
+		int q = div(x1,x2);
+		int n = times(q,x2);
+		return x1-x2;
 	}	
 
 	// Returns the integer part of sqrt(x) 
 	public static int sqrt(int x) {
-		// Replace the following statement with your code
-		return 0;
+		int g = 0;
+		boolean b = times(g,g) < x, c = times(g,g) == x;
+		
+		while(times(g,g) <= x)
+		{
+		 g++;
+		}
+		return g-1;
 	}	  	  
 }
